@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+  <h1>Predict your career </h1>
+  <h6>created by Soham Chakraborty</h6>
+  <h6>Dexterity Global Technical Research Intern</h6>
+  <br>
+  {{ prediction_text }}
+  <br>
+  <br>
+  <br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="experience" placeholder="Academic Percentage in Operating System" required="required" />
+        <input type="text" name="test_score" placeholder="Percentage in Algorithms" required="required" />
+    <input type="text" name="interview_score" placeholder="Percentage in programming concepts" required="required" />
+    <input type="text" name="interview_score1" placeholder="percentage in software engineering" required="required" />
+    <input type="text" name="interview_score2" placeholder="percentage in computer networks" required="required" />
+    <input type="text" name="interview_score3" placeholder="Percentage in electronic subjects" required="required" />
+    <input type="text" name="interview_score4" placeholder="Percentage in computer Architecture" required="required" />
+    <input type="text" name="interview_score5" placeholder="Percentage in mathematics" required="required" />
+    <input type="text" name="interview_score6" placeholder="Percentage in Communication skills" required="required" />
+    <input type="text" name="interview_score7" placeholder="Hours of working per day" required="required" />
+    <input type="text" name="interview_score8" placeholder="Logical quotient rating" required="required" />
+    <input type="text" name="interview_score9" placeholder="hackathons" required="required" />
+    <input type="text" name="interview_score10" placeholder="coding skills rating" required="required" />
+    <input type="text" name="interview_score11" placeholder="public speaking rating" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+ </div>
+
+
+</body>
+</html>
